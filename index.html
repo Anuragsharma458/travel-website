@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wanderly — 3D Travel & Tours Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">✈️ Wander<span>ly</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="btn btn-sm btn-primary">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-slides" id="heroSlides"></div>
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <p class="hero-kicker reveal">Explore • Dream • Discover</p>
+    <h1 class="hero-title reveal">Your Journey <span class="grad-text">Begins</span> Here</h1>
+    <p class="hero-sub reveal">Breathtaking destinations, handcrafted tours and unforgettable memories — powered by stunning 3D world views.</p>
+    <div class="hero-btns reveal">
+      <a href="#destinations" class="btn btn-primary btn-lg">Explore Destinations</a>
+      <a href="#packages" class="btn btn-ghost btn-lg">View Packages</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div><strong data-count="120">0</strong><span>Destinations</span></div>
+      <div><strong data-count="15">0</strong><span>Years Experience</span></div>
+      <div><strong data-count="48">0</strong><span>K+ Happy Travelers</span></div>
+    </div>
+  </div>
+  <div class="globe-label" id="globeLabel">
+    <span class="gl-plane">✈️</span>
+    <span class="gl-place" id="glPlace">Santorini</span>
+    <span class="gl-country" id="glCountry">Greece</span>
+  </div>
+  <a href="#destinations" class="scroll-hint">↓ Scroll</a>
+</header>
+
+<!-- DESTINATIONS -->
+<section class="section" id="destinations">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Top Picks</span>
+      <h2>Popular <span class="grad-text">Destinations</span></h2>
+      <p>Hover a card to see the world tilt in 3D. From snowy peaks to tropical seas — we've got it all.</p>
+    </div>
+    <div class="grid destinations" id="destinationGrid"></div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section section-alt" id="packages">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Best Value</span>
+      <h2>Tour <span class="grad-text">Packages</span></h2>
+      <p>Transparent pricing, no hidden fees. Pick the plan that fits your wanderlust.</p>
+    </div>
+    <div class="grid packages" id="packageGrid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-wrap">
+    <div class="about-media reveal">
+      <div class="about-card c1">🏝️</div>
+      <div class="about-card c2">🏔️</div>
+      <div class="about-card c3">🗺️</div>
+      <div class="about-badge">
+        <strong>15+</strong>
+        <span>Years of<br/>Adventure</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-head left reveal">
+        <span class="kicker">About Us</span>
+        <h2>We Make Travel <span class="grad-text">Effortless</span></h2>
+      </div>
+      <p class="reveal">Founded in 2010, <strong>Wanderly</strong> has grown from a two-person office into a global travel family. Our expert local guides, flexible itineraries and 24/7 support mean you travel with total peace of mind.</p>
+      <ul class="about-list reveal">
+        <li>🌟 <strong>Handpicked guides</strong> — locals who know every hidden gem</li>
+        <li>🛡️ <strong>Fully insured</strong> — every booking protected end-to-end</li>
+        <li>🧭 <strong>Custom itineraries</strong> — trips built around your style</li>
+        <li>💚 <strong>Eco-conscious</strong> — sustainable tourism at heart</li>
+      </ul>
+      <div class="about-cta reveal">
+        <a href="#contact" class="btn btn-primary">Start Planning</a>
+        <a href="#destinations" class="btn btn-outline">See Destinations</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Loved by Travelers</span>
+      <h2>What Our <span class="grad-text">Guests Say</span></h2>
+    </div>
+    <div class="grid testimonials">
+      <div class="t-card reveal">
+        <p>"The 3D trip preview sold me, but the actual Bali tour blew me away. Flawless planning, incredible guides."</p>
+        <div class="t-user"><div class="avatar" style="background:#f97316">SR</div><div><strong>Sofia Reyes</strong><span>Honeymoon, Bali</span></div></div>
+      </div>
+      <div class="t-card reveal">
+        <p>"Swiss Alps package was worth every cent. Seamless transfers, cozy hotels, and zero stress. Highly recommend!"</p>
+        <div class="t-user"><div class="avatar" style="background:#06b6d4">JP</div><div><strong>James Park</strong><span>Family, Switzerland</span></div></div>
+      </div>
+      <div class="t-card reveal">
+        <p>"Custom itinerary to Morocco exceeded expectations. The team responded within minutes every single time."</p>
+        <div class="t-user"><div class="avatar" style="background:#8b5cf6">AL</div><div><strong>Amina Latif</strong><span>Solo, Morocco</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / BOOKING -->
+<section class="section" id="contact">
+  <div class="container contact-wrap">
+    <div class="contact-info reveal">
+      <div class="section-head left">
+        <span class="kicker">Booking</span>
+        <h2>Plan Your <span class="grad-text">Next Trip</span></h2>
+        <p>Tell us where you dream of going and our travel experts will craft the perfect itinerary within 24 hours.</p>
+      </div>
+      <ul class="contact-list">
+        <li>📍 42 Explorer Avenue, Wander City</li>
+        <li>📞 +1 (555) 010-9988</li>
+        <li>✉️ hello@wanderly.travel</li>
+        <li>🕘 Mon–Sat, 9:00 AM – 7:00 PM</li>
+      </ul>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">𝕏</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+    <form class="contact-form reveal" id="bookingForm" novalidate>
+      <h3>Book Your Adventure</h3>
+      <div class="form-row">
+        <div class="field"><label>Full Name</label><input type="text" name="name" required placeholder="Jane Doe" /></div>
+        <div class="field"><label>Email</label><input type="email" name="email" required placeholder="jane@email.com" /></div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label>Destination</label>
+          <select name="destination" required>
+            <option value="">Choose a destination…</option>
+            <option>Santorini, Greece</option>
+            <option>Bali, Indonesia</option>
+            <option>Kyoto, Japan</option>
+            <option>Swiss Alps</option>
+            <option>Machu Picchu, Peru</option>
+            <option>Dubai, UAE</option>
+          </select>
+        </div>
+        <div class="field"><label>Travel Date</label><input type="date" name="date" required /></div>
+      </div>
+      <div class="field">
+        <label>Package</label>
+        <div class="chips" id="pkgChips">
+          <button type="button" class="chip active" data-value="Explorer">Explorer</button>
+          <button type="button" class="chip" data-value="Adventurer">Adventurer</button>
+          <button type="button" class="chip" data-value="Luxury Voyager">Luxury Voyager</button>
+        </div>
+      </div>
+      <div class="field"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us about your dream trip…"></textarea></div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Send Booking Request ✈️</button>
+      <p class="form-msg" id="formMsg"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="logo">✈️ Wander<span>ly</span></a>
+      <p>Turning travel dreams into lifelong memories since 2010.</p>
+    </div>
+    <div><h4>Company</h4><a href="#about">About</a><a href="#destinations">Destinations</a><a href="#packages">Packages</a></div>
+    <div><h4>Support</h4><a href="#contact">Contact</a><a href="#">FAQ</a><a href="#">Terms</a></div>
+    <div><h4>Newsletter</h4>
+      <form class="newsletter" id="newsletterForm"><input type="email" placeholder="Your email" required /><button class="btn btn-primary btn-sm">Join</button></form>
+    </div>
+  </div>
+  <p class="copyright">© 2026 Wanderly Travels. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
